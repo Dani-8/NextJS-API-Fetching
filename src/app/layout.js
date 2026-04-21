@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
               <div className="bg-slate-100 p-1 rounded text-slate-400">
                 <ShoppingBag size={14} />
               </div>
-              <span>© 2026 Trendly Next.js Demo</span>
+              <span>© 2026 Store Next.js Demo</span>
             </div>
             
             <div className="flex gap-8">

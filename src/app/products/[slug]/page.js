@@ -6,6 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 import { fetchProductBySlug } from '@/lib/api';
 import Loader from '@/components/Loader';
 
+
 export default function ProductDetailPage() {
   const params = useParams();
   const slug = params?.slug; 
@@ -43,11 +44,13 @@ useEffect(() => {
             alt={item.title} 
             className="max-h-[450px] object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700 relative z-10" 
           />
+
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] font-black text-black/5 select-none z-0 uppercase">
             {item.category.split(' ')[0]}
           </div>
         </div>
         
+
         <div className="flex flex-col py-4">
           <span className="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-4">{item.category}</span>
           <h1 className="text-4xl font-black tracking-tighter leading-tight mb-6 text-black italic uppercase">
@@ -60,6 +63,7 @@ useEffect(() => {
               <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Price</span>
               <span className="text-4xl font-black text-black tracking-tighter">${item.price}</span>
             </div>
+            
             <button className="bg-black text-white px-12 py-5 rounded-full font-black uppercase tracking-tighter hover:bg-slate-800 transition-all active:scale-95 shadow-xl">
               Add to Cart
             </button>
