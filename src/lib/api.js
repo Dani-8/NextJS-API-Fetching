@@ -15,7 +15,6 @@ export async function fetchProducts() {
 }
 
 
-
 export async function fetchProductBySlug(slug) {
   try {
     const res = await fetch(`${BASE_URL}/products`, {
