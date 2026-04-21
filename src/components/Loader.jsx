@@ -1,9 +1,10 @@
 import { Loader2 } from 'lucide-react';
 
-export default function Loader() {
+export default function Loader({ message = "Loading..." }) {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white/60 backdrop-blur-sm z-50">
-      <Loader2 className="animate-spin" size={40} />
+    <div className="flex flex-col items-center justify-center py-24 text-slate-400">
+      <Loader2 className="animate-spin mb-4" size={32} />
+      <p className="text-sm font-medium uppercase tracking-widest">{message}</p>
     </div>
   );
 }
